@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Manas Soni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-wrapper {
+            margin-top: 120px;
+            display: flex;
+            gap: 4rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-form-container {
+            flex: 1.2;
+            padding: 3rem;
+            border-radius: 24px;
+        }
+
+        .info-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateX(10px);
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            color: var(--secondary-accent);
+            background: rgba(6, 182, 212, 0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .info-details h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .info-details p {
+            color: var(--text-secondary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-accent);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .contact-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-animated">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar glass">
+        <div class="logo">
+            <a href="index.html">Portfolio</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="section-padding">
+        <div class="container text-center">
+            <h1 class="section-title">Get In Touch</h1>
+            <p class="section-subtitle">Have a question or want to work together? Leave a message!</p>
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info">
+                <div class="info-card glass">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:manassoni009@gmail.com" class="social-text-link">manassoni009@gmail.com</a>
+                        </p>
+                        <p><a href="mailto:manassoni0905@gmail.com" class="social-text-link">manassoni0905@gmail.com</a>
+                            (Alt)</p>
+                    </div>
+                </div>
+
+                <div class="info-card glass">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>Location</h3>
+                        <p>India</p>
+                    </div>
+                </div>
+
+                <div class="info-card glass social-card">
+                    <div class="info-icon github-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/ManasSoni-2009" target="_blank"
+                            class="social-text-link">@ManasSoni-2009</a>
+                    </div>
+                    <div class="live-indicator">
+                        <span class="pulse"></span> Live
+                    </div>
+                </div>
+
+                <div class="info-card glass social-card">
+                    <div class="info-icon linkedin-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/manassoni" target="_blank" class="social-text-link">Manas
+                            Soni</a>
+                    </div>
+                    <div class="live-indicator">
+                        <span class="pulse"></span> Live
+                    </div>
+                </div>
+
+                <div class="info-card glass social-card">
+                    <div class="info-icon ig-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>Instagram</h3>
+                        <a href="https://www.instagram.com/theunintentionallyunknown/" target="_blank"
+                            class="social-text-link">@theunintentionallyunknown</a>
+                    </div>
+                    <div class="live-indicator">
+                        <span class="pulse"></span> Live
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container glass">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"
+                            style="margin-left: 8px;"></i></button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 Manas Soni. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/ManasSoni-2009" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/manassoni" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/theunintentionallyunknown/" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple frontend form handler
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.style.opacity = '0.7';
+
+            // Simulate network request
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                e.target.reset();
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.style.opacity = '1';
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

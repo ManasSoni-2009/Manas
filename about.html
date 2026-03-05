@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Manas Soni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-content {
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .bio-section {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .bio-text {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .bio-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-stats {
+            flex: 0.8;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            padding: 2rem;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--secondary-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item {
+            width: 100%;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 55%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 55%;
+            text-align: right;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--accent-glow);
+            z-index: 1;
+        }
+
+        .timeline-content {
+            padding: 2rem;
+            border-radius: 20px;
+            width: 45%;
+        }
+
+        .timeline-date {
+            color: var(--secondary-accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .bio-section {
+                flex-direction: column;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-animated">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar glass">
+        <div class="logo">
+            <a href="index.html">Portfolio</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="section-padding">
+        <div class="container about-content">
+
+            <div class="text-center">
+                <h1 class="section-title">About Me</h1>
+                <p class="section-subtitle">Passionate about AI, Data Science, and creating seamless digital
+                    experiences.</p>
+            </div>
+
+            <section class="bio-section">
+                <div class="bio-text">
+                    <p>I'm Manas Soni, a highly motivated individual passionate about solving complex problems through
+                        code. My journey in tech started with a profound interest in how systems work beneath the
+                        surface, leading me to full-stack development and the fascinating world of AI.</p>
+                    <p>Recently having cleared high school with top grades and achieving an excellent ranking in JEE
+                        Mains, I am currently awaiting enrollment in a prestigious university to pursue my B.Tech in
+                        Artificial Intelligence and Data Science.</p>
+                    <p>Beyond academics, I actively build automated systems and AI agents. From orchestrating multi-blog
+                        content generation networks to setting up pipelines for AI-generated stock photos on Adobe, I
+                        focus on practical applications of emerging technologies.</p>
+                </div>
+                <div class="bio-stats">
+                    <div class="stat-card glass-panel">
+                        <div class="stat-number">10+</div>
+                        <div>Projects Built</div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-number">4+</div>
+                        <div>Languages Mastered</div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-number" style="font-size: 2rem;">Qualified</div>
+                        <div>JEE Mains Rank</div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-number">100%</div>
+                        <div>Dedication</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-4">
+                <h2 class="section-title text-center" style="margin-bottom: 4rem;">Journey & Qualifications</h2>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-date">Upcoming</div>
+                            <h3>B.Tech in AI & Data Science</h3>
+                            <p style="color: var(--text-secondary); margin-top: 10px;">Enrolling in a prestigious
+                                university to formally expand my expertise in machine learning, neural networks, and
+                                advanced data analytics.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-date">2025</div>
+                            <h3>JEE Mains Excellence</h3>
+                            <p style="color: var(--text-secondary); margin-top: 10px;">Secured an outstanding rank in
+                                the highly competitive Joint Entrance Examination, demonstrating strong analytical and
+                                problem-solving capabilities.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-date">2025</div>
+                            <h3>High School Graduation</h3>
+                            <p style="color: var(--text-secondary); margin-top: 10px;">Passed with excellent academic
+                                standing, building a robust foundation in Mathematics, Physics, and analytical logic.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 Manas Soni. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/ManasSoni-2009" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/manassoni" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/theunintentionallyunknown/" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
