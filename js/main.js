@@ -129,45 +129,62 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =========================================================================
        6. SCROLL TRIGGER ANIMATIONS (GLOBAL REVEALS & TIMELINE)
        ========================================================================= */
-    const revealElements = document.querySelectorAll('.reveal-text, .fade-text');
-    revealElements.forEach((el) => {
-        if (!el.closest('.hero')) {
-            gsap.fromTo(el,
-                { y: 60, opacity: 0, scale: 0.98 },
-                {
-                    y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "expo.out",
-                    scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" }
-                }
-            );
-        }
-    });
+    let globalMm = gsap.matchMedia();
 
-    // Parallax Image in About
-    const parallaxImg = document.querySelector('.parallax-img');
-    if (parallaxImg) {
-        gsap.to(parallaxImg, {
-            yPercent: 20, ease: "none",
-            scrollTrigger: { trigger: '.about-visual', start: "top bottom", end: "bottom top", scrub: true }
-        });
-    }
+    globalMm.add({
+        isDesktop: "(min-width: 769px)",
+        isMobile: "(max-width: 768px)"
+    }, (context) => {
+        let { isMobile } = context.conditions;
+        const scrollStart = isMobile ? "top 95%" : "top 85%";
+        const scrollToggle = isMobile ? "play none none none" : "play none none reverse";
 
-    // Timeline Items Scroll Animation
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach((item, index) => {
-        gsap.from(item, {
-            y: 80, opacity: 0, scale: 0.95, duration: 1.2, ease: "expo.out",
-            scrollTrigger: {
-                trigger: item,
-                start: "top 85%",
-                toggleActions: "play none none reverse"
+        const revealElements = document.querySelectorAll('.reveal-text, .fade-text');
+        revealElements.forEach((el) => {
+            if (!el.closest('.hero')) {
+                gsap.fromTo(el,
+                    { y: 60, opacity: 0, scale: 0.98 },
+                    {
+                        y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "expo.out",
+                        scrollTrigger: { trigger: el, start: scrollStart, toggleActions: scrollToggle }
+                    }
+                );
             }
         });
-    });
 
-    // Skill Grid Cards Stagger
-    gsap.from('.skill-card', {
-        y: 60, opacity: 0, scale: 0.9, stagger: 0.05, duration: 1, ease: "expo.out",
-        scrollTrigger: { trigger: '.skills-grid', start: "top 85%" }
+        // Parallax Image in About
+        const parallaxImg = document.querySelector('.parallax-img');
+        if (parallaxImg) {
+            gsap.to(parallaxImg, {
+                yPercent: 20, ease: "none",
+                scrollTrigger: { trigger: '.about-visual', start: "top bottom", end: "bottom top", scrub: true }
+            });
+        }
+
+        // Timeline Items Scroll Animation
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach((item, index) => {
+            gsap.fromTo(item,
+                { y: 80, opacity: 0, scale: 0.95 },
+                {
+                    y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "expo.out",
+                    scrollTrigger: {
+                        trigger: item,
+                        start: scrollStart,
+                        toggleActions: scrollToggle
+                    }
+                }
+            );
+        });
+
+        // Skill Grid Cards Stagger
+        gsap.fromTo('.skill-card',
+            { y: 60, opacity: 0, scale: 0.9 },
+            {
+                y: 0, opacity: 1, scale: 1, stagger: 0.05, duration: 1, ease: "expo.out",
+                scrollTrigger: { trigger: '.skills-grid', start: scrollStart, toggleActions: scrollToggle }
+            }
+        );
     });
 
 
