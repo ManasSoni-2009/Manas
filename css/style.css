@@ -61,6 +61,24 @@ img {
     display: block;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
 /* Lenis Wrapper Required Styles */
 html.lenis,
 html.lenis body {
@@ -823,6 +841,30 @@ h4,
 .p2 {
     background-image: url('../assets/ai_blog.webp');
     background-color: #333;
+}
+
+.p3 {
+    background-color: #2a2a2a;
+}
+
+.p4 {
+    background-color: #444;
+}
+
+.p5 {
+    background-color: #223;
+}
+
+.p6 {
+    background-color: #322;
+}
+
+.p7 {
+    background-color: #233;
+}
+
+.p8 {
+    background-color: #332;
 }
 
 .project-title {
