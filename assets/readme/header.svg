@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&amp;display=swap');
+
+            .bg { fill: #0a0a0b; }
+            .accent { fill: #D2FF00; }
+            .text-main { fill: #FFFFFF; font-family: 'Archivo Black', sans-serif; }
+
+            .title {
+                font-size: 52px;
+                animation: slideIn 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+                opacity: 0;
+            }
+            .subtitle {
+                font-size: 20px;
+                font-family: monospace;
+                fill: #A0A0A0;
+                animation: fadeIn 2s ease forwards 0.5s;
+                opacity: 0;
+            }
+
+            .glow {
+                animation: pulse 2s infinite alternate;
+            }
+
+            @keyframes slideIn {
+                0% { transform: translateY(30px); opacity: 0; }
+                100% { transform: translateY(0); opacity: 1; }
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes pulse {
+                0% { filter: drop-shadow(0 0 5px #D2FF00); transform: scale(1); }
+                100% { filter: drop-shadow(0 0 15px #D2FF00); transform: scale(1.02); }
+            }
+
+            .grid-line {
+                stroke: rgba(255,255,255,0.05);
+                stroke-width: 1;
+            }
+        </style>
+
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" class="grid-line"/>
+        </pattern>
+    </defs>
+
+    <!-- Background -->
+    <rect width="100%" height="100%" class="bg" rx="15" />
+    <rect width="100%" height="100%" fill="url(#grid)" rx="15" />
+
+    <!-- Decorative Elements -->
+    <circle cx="700" cy="100" r="60" fill="none" stroke="#D2FF00" stroke-width="2" stroke-dasharray="10 5" class="glow">
+        <animateTransform attributeName="transform" type="rotate" from="0 700 100" to="360 700 100" dur="10s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="700" cy="100" r="40" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.2"/>
+
+    <path d="M 50 150 L 150 150 L 170 170" fill="none" stroke="#D2FF00" stroke-width="2" class="glow" />
+
+    <rect x="50" y="30" width="30" height="4" class="accent"/>
+
+    <!-- Text Content -->
+    <text x="50" y="90" class="text-main title">MANAS SONI</text>
+    <text x="50" y="130" class="subtitle">FULL-STACK DEVELOPER &amp; AI ORCHESTRATOR</text>
+
+    <!-- Code bracket decoration -->
+    <text x="685" y="115" font-family="monospace" font-size="40" fill="#D2FF00" font-weight="bold" class="glow">&lt;/&gt;</text>
+</svg>

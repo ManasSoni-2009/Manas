@@ -1,41 +1,72 @@
-# Manas Soni | Student & Full-Stack Developer 🚀
+# Manas Soni | Full-Stack Developer
 
-![Portfolio Preview](https://raw.githubusercontent.com/ManasSoni-2009/manassoni-2009.github.io/main/assets/og-preview.png)
+<div align="center">
 
-[![Website](https://img.shields.io/badge/Website-Live-brightgreen.svg)](https://manassoni-2009.github.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<img src="./assets/readme/header.svg" width="100%" alt="Manas Soni | Full-Stack Developer">
 
-> Portfolio of Manas Soni, a student and developer building automated systems, multi-agent AI networks, and premium web experiences.
+**Student & Developer building automated systems, multi-agent AI networks, and premium web experiences.**
 
----
+[![Website](https://img.shields.io/badge/Website-Live-D2FF00?style=for-the-badge&logoColor=0a0a0b&textColor=0a0a0b)](https://manassoni-2009.github.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-D2FF00?style=for-the-badge&logoColor=0a0a0b&textColor=0a0a0b)](https://opensource.org/licenses/MIT)
+
+<br/>
+
+<a href="https://manassoni-2009.github.io">
+    <picture>
+      <img src="./assets/og-preview.png" alt="Portfolio Preview" width="800" style="border-radius: 15px; border: 1px solid rgba(210, 255, 0, 0.2); box-shadow: 0 0 20px rgba(210, 255, 0, 0.1);">
+    </picture>
+</a>
+
+<br/>
+<br/>
+
+<img src="./assets/readme/divider.svg" width="100%" alt="Divider">
+
+</div>
 
 ## ✨ Key Features
 
-- **Modern & Premium UI:** Crafted with an eye for detail, featuring a dark mode aesthetic with vibrant accents.
-- **Fluid Animations:** Powered by **GSAP** and **Lenis** for smooth scrolling, parallax effects, and staggered reveals.
-- **Interactive Elements:** Custom cursor, magnetic buttons, and a horizontal scroll section for projects.
-- **Responsive Design:** Completely fluid and accessible across all devices (mobile, tablet, and desktop).
-- **Automated Image Optimization:** Includes a Python script (`optimize.py`) to batch convert images to `.webp` format for enhanced performance.
+This repository houses a personal portfolio built with a focus on cutting-edge design and fluid performance.
 
----
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎨 Modern & Premium UI</h3>
+      <p>Crafted with an eye for detail, featuring a dark mode aesthetic (Pitch Dark) with vibrant Neon Green accents.</p>
+    </td>
+    <td width="50%">
+      <h3>🌊 Fluid Animations</h3>
+      <p>Powered by <strong>GSAP</strong> and <strong>Lenis</strong> for smooth scrolling, parallax effects, and staggered reveals.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🖱️ Interactive Elements</h3>
+      <p>Custom cursor, magnetic buttons, and a unique horizontal scroll section for projects.</p>
+    </td>
+    <td width="50%">
+      <h3>⚡ Automated Optimization</h3>
+      <p>Includes a Python script (<code>optimize.py</code>) to batch convert images to <code>.webp</code> format for enhanced loading speeds.</p>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+<img src="./assets/readme/divider.svg" width="100%" alt="Divider">
+</div>
 
 ## 🛠️ Tech Stack
 
-### Frontend
+### Architecture
 
-- **HTML5:** Semantic structure and accessible markup.
-- **CSS3:** Advanced styling, CSS variables, and responsive design.
-- **JavaScript (Vanilla):** DOM manipulation, event handling, and logic.
-- **GSAP (GreenSock):** High-performance animations and ScrollTrigger effects.
-- **Lenis:** Smooth scrolling wrapper.
+* **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+* **Animation:** GSAP (GreenSock)
+* **Scrolling:** Lenis
+* **Utilities:** Python (Pillow) for Image Processing
 
-### Utilities
-
-- **Python (Pillow):** Image processing and optimization (`optimize.py`).
-
----
-
-## 📂 Repository Structure
+<details>
+<summary><b>📂 View Repository Structure</b></summary>
+<br>
 
 ```text
 ├── assets/         # Images, icons, and visual assets
@@ -48,11 +79,15 @@
 └── optimize.py     # Python script for WebP image conversion
 ```
 
----
+</details>
 
-## 🚀 Getting Started
+<div align="center">
+<img src="./assets/readme/divider.svg" width="100%" alt="Divider">
+</div>
 
-To run this project locally, follow these steps:
+## 🚀 Quick Start
+
+Launch the project locally in three steps:
 
 1. **Clone the repository:**
 
@@ -62,55 +97,53 @@ To run this project locally, follow these steps:
    ```
 
 2. **Run a local server:**
-   Since this is a static website, you can use any local server. For example, using Python:
 
    ```bash
    python -m http.server 8000
    ```
 
-3. **Open in browser:**
-   Navigate to `http://localhost:8000` to view the website.
+3. **View the experience:**
 
----
+   Navigate to `http://localhost:8000` in your browser.
 
-## 🖼️ Image Optimization (`optimize.py`)
+<div align="center">
+<img src="./assets/readme/divider.svg" width="100%" alt="Divider">
+</div>
 
-The repository includes a Python script to automatically convert `.png`, `.jpg`, and `.jpeg` images in your `assets` directory to the highly optimized `.webp` format.
+## 🖼️ Image Optimization System
 
-### Usage
+The repository includes `optimize.py`, a utility to maintain high performance by converting `.png`, `.jpg`, and `.jpeg` assets to `.webp`.
 
-1. **Install required dependencies:**
+**Setup & Usage:**
 
-   ```bash
-   pip install Pillow
-   ```
+```bash
+# Install dependencies
+pip install Pillow
 
-2. **Run the script:**
-   *Note: Update the `assets_dir` variable inside `optimize.py` to point to your local assets directory before running.*
+# Run the optimizer
+python optimize.py
+```
 
-   ```bash
-   python optimize.py
-   ```
+*(Update the `assets_dir` variable inside `optimize.py` if your paths differ.)*
 
----
+<div align="center">
+<img src="./assets/readme/divider.svg" width="100%" alt="Divider">
+</div>
 
 ## 🌟 Featured Projects
 
-- **Adobe Stock Automation:** Automated system using Make.com, Imagen 4, and Adobe Firefly to generate and automatically upload AI images.
-- **Multi-Agent Blog Network:** Orchestration connecting multiple AI models to fetch news, generate tech blogs, and auto-publish.
-- **Algorithmic Visualizer:** A high-performance C++ tool to visualize complex sorting and pathfinding algorithms.
+* **Adobe Stock Automation:** Automated system using Make.com, Imagen 4, and Adobe Firefly to generate and auto-upload AI images.
+* **Multi-Agent Blog Network:** Orchestration connecting multiple AI models to fetch news, generate tech blogs, and auto-publish.
+* **Algorithmic Visualizer:** A high-performance C++ tool to visualize complex sorting and pathfinding algorithms.
 
----
+<div align="center">
+<img src="./assets/readme/divider.svg" width="100%" alt="Divider">
 
-## 📫 Contact
+### 📫 Connect
 
-- **Email:** [manassoni009@gmail.com](mailto:manassoni009@gmail.com)
-- **LinkedIn:** [Manas Soni](https://linkedin.com/in/manassoni)
-- **GitHub:** [@ManasSoni-2009](https://github.com/ManasSoni-2009)
-- **Instagram:** [@theunintentionallyunknown](https://www.instagram.com/theunintentionallyunknown/)
+[Email](mailto:manassoni009@gmail.com) • [LinkedIn](https://linkedin.com/in/manassoni) • [GitHub](https://github.com/ManasSoni-2009) • [Instagram](https://www.instagram.com/theunintentionallyunknown/)
 
----
-
-<p align="center">
-  <i>Built with raw passion by Manas Soni.</i>
-</p>
+<br>
+<br>
+<i>Built with raw passion by Manas Soni.</i>
+</div>
